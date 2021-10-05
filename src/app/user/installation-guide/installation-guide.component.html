@@ -1,0 +1,114 @@
+<section class="installation-guide">
+    <div class="installation-guide__header">
+        <a [routerLink]="" class="installation-guide__header-logo">
+            <img src="../../../assets/images/logo-full-colored.png" alt="asktalos logo" />
+        </a>
+    </div>
+
+    <div class="installation-guide__main">
+        <div class="installation-guide__top">
+            <h3 class="installation-guide__heading">
+                Install asktalos widget on different platform
+            </h3>
+            <p class="installation-guide__description">
+                Choose the platform and follow the instructions
+            </p>
+        </div>
+
+        <div class="installation-guide__accordions">
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header [collapsedHeight]="accordionHeight">
+                        <mat-panel-title>
+                            <img src="../../../assets/images/javascript-logo.png" alt="JS logo" />
+                            <span>Javascript</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <p>
+                        Place this code just before the closing <span>{{ bodyTag }}</span> tag
+                    </p>
+                    <code>
+            <p>{{ scriptCode }}</p>
+          </code>
+                    <div class="text-right">
+                        <button mat-button class="bttn bttn-secondary">Copy</button>
+                    </div>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header [collapsedHeight]="accordionHeight">
+                        <mat-panel-title>
+                            <img src="../../../assets/images/shopify-logo.png" alt="Shopify" />
+                            <span>Shopify</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <p>1. Login to your Shopify panel</p>
+                    <p>
+                        2. Go to Online Store > Themes > Actions drop-down menu under Current Theme > Edit code > theme.liquid
+                    </p>
+                    <p>
+                        3. Place this code just before the <span>{{ bodyTag }}</span> tag at the end of the theme.liquid script
+                    </p>
+                    <code>
+            <p>{{ scriptCode }}</p>
+          </code>
+                    <div class="text-right">
+                        <button mat-button class="bttn bttn-secondary">Copy</button>
+                    </div>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header [collapsedHeight]="accordionHeight">
+                        <mat-panel-title>
+                            <img src="../../../assets/images/wordpress-logo.png" alt="Wordpress" />
+                            <span>Wordpress</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>1. Login to your WordPress admin panel</p>
+                    <p>2. Go to Appearance > Theme Editor</p>
+                    <p>
+                        3. Under Theme Files (far right), find the Theme Footer (footer.php) and select it
+                    </p>
+                    <p>
+                        4. Paste your Tidio code before the <span>{{ bodyTag }}</span> tag at the bottom
+                    </p>
+                    <p>5. Click Update File to save changes</p>
+
+                    <code>
+            <p>{{ scriptCode }}</p>
+          </code>
+                    <div class="text-right">
+                        <button mat-button class="bttn bttn-secondary">Copy</button>
+                    </div>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header [collapsedHeight]="accordionHeight">
+                        <mat-panel-title>
+                            <img src="../../../assets/images/bigcommerce-logo.png" alt="Big Commerce" />
+                            <span>Big Commerce</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <p>1. Login to your Bigcommerce panel</p>
+                    <p>2. Go to the 'Storefront' section</p>
+                    <p>3. Select 'Footer Scripts' from the list</p>
+                    <p>4. Paste the Tidio code into the text area and save your changes</p>
+
+                    <code>
+            <p>{{ scriptCode }}</p>
+          </code>
+                    <div class="text-right">
+                        <button mat-button class="bttn bttn-secondary">Copy</button>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+        <div class="installation-guide__buttons">
+            <button mat-button class="bttn bttn-outlined">Go Back</button>
+            <button mat-button class="bttn bttn-secondary">Continue</button>
+        </div>
+    </div>
+</section>

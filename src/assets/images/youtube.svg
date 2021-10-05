@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_1078" data-name="Group 1078" transform="translate(-367 -377)">
+    <g id="Rectangle_355" data-name="Rectangle 355" transform="translate(367 377)" fill="none" stroke="#fff" stroke-width="1">
+      <rect width="32" height="32" rx="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="31" height="31" rx="2.5" fill="none"/>
+    </g>
+    <g id="Group_1077" data-name="Group 1077" transform="translate(0.074 0.052)">
+      <path id="_008-youtube" data-name="008-youtube" d="M18.2-4.046a2.328,2.328,0,0,0-1.638-1.638,54.4,54.4,0,0,0-7.272-.4A56.519,56.519,0,0,0,2.021-5.7,2.376,2.376,0,0,0,.383-4.046,24.534,24.534,0,0,0,0,.424a24.444,24.444,0,0,0,.383,4.47A2.329,2.329,0,0,0,2.022,6.533a54.5,54.5,0,0,0,7.272.4,56.519,56.519,0,0,0,7.272-.383A2.329,2.329,0,0,0,18.2,4.91,24.542,24.542,0,0,0,18.586.44,23.289,23.289,0,0,0,18.2-4.046Z" transform="translate(373.632 392.196)" fill="none" stroke="#fff" stroke-width="1"/>
+      <path id="Polygon_6" data-name="Polygon 6" d="M3,0,6,6H0Z" transform="translate(386.926 389.948) rotate(90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

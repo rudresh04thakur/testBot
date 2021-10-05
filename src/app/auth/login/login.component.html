@@ -1,0 +1,127 @@
+<section class="onboarding-container">
+  <div class="onboarding-vector-section">
+    <div class="onboarding-vector-section__carousel">
+      <owl-carousel-o [options]="onboardingCarouselOptions">
+        <ng-template carouselSlide>
+          <div>
+            <img src="../../../assets/images/onboarding-vector.png" alt=""
+              class="onboarding-vector-section__carousel-image" />
+            <div class="onboarding-vector-section__carousel-text">
+              <h2>Manage All Bots With One User Interface</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div>
+            <img src="../../../assets/images/onboarding-vector.png" alt=""
+              class="onboarding-vector-section__carousel-image" />
+            <div class="onboarding-vector-section__carousel-text">
+              <h2>Manage All Bots With One User Interface</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et
+              </p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div>
+            <img src="../../../assets/images/onboarding-vector.png" alt=""
+              class="onboarding-vector-section__carousel-image" />
+            <div class="onboarding-vector-section__carousel-text">
+              <h2>Manage All Bots With One User Interface</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et
+              </p>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+  <div class="onboarding-form-section">
+    <div class="onboarding-form-section__inner">
+      <form class="onboarding-form-section__form" [formGroup]="form" (ngSubmit)="signIn()">
+        <!-- <img src="../../../assets/images/logo-full-colored.png" alt="askTolas logo"
+          class="onboarding-form-section__logo" />-->
+
+        <h1 class="onboarding-form-section__form-heading">
+          Sign In to asktalos
+        </h1>
+
+        <p class="onboarding-form-section__form-suggestion">
+          Automate your business with asktalos
+        </p>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="Enter your email" type="email" formControlName="email" />
+          <mat-error *ngIf="form.get('email').hasError('required')">
+            Email is <strong>required</strong> </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Enter password</mat-label>
+          <input matInput placeholder="Enter password" type="password" formControlName="password" />
+          <mat-error *ngIf="form.get('password').hasError('required')">
+            Password is <strong>required</strong> </mat-error>
+        </mat-form-field>
+        <h4 style="color: red;">{{errorMsg}}</h4>
+        <div class="onboarding-form-section__form-remember">
+          <mat-checkbox value="remember_me" formControlName="remember_me">Remember me</mat-checkbox>
+          <a routerLink="/auth/forgot-password" class="link">Forgot Password?</a>
+        </div>
+
+        <button mat-button class="bttn bttn-secondary">Sign In</button>
+        <p class="onboarding-form-section__form-next-action">
+          Don't have an account ?
+          <a [routerLink]="['', 'auth', 'sign-up']" class="link">Sign Up</a>
+        </p>
+
+      </form>
+
+
+
+
+
+      <button (click)="msSingIn()" mat-button class="bttn bttn-outlined bttn-linkedin">
+        <span class="onboarding-form-section__button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g id="Group_1802" data-name="Group 1802" transform="translate(-1419 -828)">
+              <rect id="Rectangle_565" data-name="Rectangle 565" width="24" height="24" transform="translate(1419 828)"
+                fill="none" />
+              <path id="Icon_ionic-logo-linkedin" data-name="Icon ionic-logo-linkedin"
+                d="M19.22,4.5H5.867A1.305,1.305,0,0,0,4.5,5.746V19.129A1.408,1.408,0,0,0,5.867,20.5H19.216A1.336,1.336,0,0,0,20.5,19.129V5.746A1.227,1.227,0,0,0,19.22,4.5ZM9.46,17.837H7.167V10.71H9.46ZM8.393,9.626H8.376A1.176,1.176,0,0,1,7.167,8.4,1.184,1.184,0,0,1,8.405,7.167,1.181,1.181,0,0,1,9.63,8.4,1.184,1.184,0,0,1,8.393,9.626Zm9.444,8.21H15.545v-3.9c0-.934-.333-1.571-1.163-1.571a1.254,1.254,0,0,0-1.175.846,1.543,1.543,0,0,0-.079.563v4.059H10.835V10.71h2.292V11.7a2.32,2.32,0,0,1,2.067-1.159c1.5,0,2.642.992,2.642,3.13v4.164Z"
+                transform="translate(1418.5 827.5)" fill="currentColor" />
+            </g>
+          </svg>
+
+          <span>Sign in with Microsoft</span>
+        </span>
+      </button>
+
+
+      <button (click)="msSingIn(false)" mat-button class="bttn bttn-outlined bttn-linkedin">
+        <span class="onboarding-form-section__button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g id="Group_1802" data-name="Group 1802" transform="translate(-1419 -828)">
+              <rect id="Rectangle_565" data-name="Rectangle 565" width="24" height="24" transform="translate(1419 828)"
+                fill="none" />
+              <path id="Icon_ionic-logo-linkedin" data-name="Icon ionic-logo-linkedin"
+                d="M19.22,4.5H5.867A1.305,1.305,0,0,0,4.5,5.746V19.129A1.408,1.408,0,0,0,5.867,20.5H19.216A1.336,1.336,0,0,0,20.5,19.129V5.746A1.227,1.227,0,0,0,19.22,4.5ZM9.46,17.837H7.167V10.71H9.46ZM8.393,9.626H8.376A1.176,1.176,0,0,1,7.167,8.4,1.184,1.184,0,0,1,8.405,7.167,1.181,1.181,0,0,1,9.63,8.4,1.184,1.184,0,0,1,8.393,9.626Zm9.444,8.21H15.545v-3.9c0-.934-.333-1.571-1.163-1.571a1.254,1.254,0,0,0-1.175.846,1.543,1.543,0,0,0-.079.563v4.059H10.835V10.71h2.292V11.7a2.32,2.32,0,0,1,2.067-1.159c1.5,0,2.642.992,2.642,3.13v4.164Z"
+                transform="translate(1418.5 827.5)" fill="currentColor" />
+            </g>
+          </svg>
+
+          <span>Log in with Microsoft</span>
+        </span>
+      </button>
+    </div>
+  </div>
+  
+</section>

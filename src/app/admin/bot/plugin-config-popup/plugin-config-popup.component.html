@@ -1,0 +1,47 @@
+<div class="modal plugin-config-popup">
+  <form>
+    <div class="modal-header">
+      <h3 class="plugin-config-popup__heading">
+          <img src="../../../../assets/images/servicenow_logo.png" alt="">
+      </h3>
+      <a (click)="closeDialog()" class="modal-close">
+        <img src="../../../../assets/icons/icon_cross.svg" alt="icon cross" />
+      </a>
+    </div>
+    <div class="mt-modal-content mat-dialog-content add-category-content">
+        <p class="plugin-config-popup__tagline">Submit your servicenow credentials to integrate with your bot.</p>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Enter Username" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Enter Password" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Instance</mat-label>
+          <input matInput placeholder="Enter Instance" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Table Name</mat-label>
+          <input matInput placeholder="Enter Table Name" />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button mat-button (click)="closeDialog()" type="button" class="bttn">
+        Cancel
+      </button>
+      <button mat-button type="submit" class="bttn bttn-secondary">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

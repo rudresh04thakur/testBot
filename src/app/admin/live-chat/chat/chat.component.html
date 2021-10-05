@@ -1,0 +1,267 @@
+<section class="live-chat">
+  <div class="live-chat__sidebar sidebar--left">
+    <div class="live-chat__sidebar-tabs">
+      <div class="live-chat__sidebar-tabs-btns">
+        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': !isWaitingWindowActive}"
+          (click)="onTabChange()">
+          <span>Chats</span>
+        </button>
+        <button class="live-chat__sidebar-tabs-btn" [ngClass]="{'active': isWaitingWindowActive}"
+          (click)="onTabChange()">
+          <span>Waiting</span>
+          <span class="app-badge badge--sky">{{waitingUsers?.waiting_count}}</span>
+        </button>
+      </div>
+
+      <ng-container *ngIf="!isWaitingWindowActive; else waitingWindowtab">
+        <div class="live-chat__sidebar-tabs-content">
+          <div class="live-chat__chat-listing">
+            
+
+            <div class="live-chat__chat-listing-list">
+              <div class="live-chat__chat-listing-item" *ngFor="let user of chatList"
+                (click)=selectChat(user?.iframe_link,user?.bot_name,user?.conversation_id);>
+                <div class="live-chat__chat-listing-item-header">
+                  <span class="live-chat__chat-listing-item-dot dot--success"></span>
+                  <h4 class="live-chat__chat-listing-item-heading">
+                    {{user?.bot_name}}
+                  </h4>
+                  <span class="app-badge badge--secondary">{{user?.bot_name}}</span>
+                  <!-- <span
+                          class="
+                            live-chat__chat-listing-item-count
+                            app-badge
+                            badge--sky
+                          "
+                          >5</span> -->
+                  <span class="
+                          app-badge
+                          badge--danger
+                        " (click)="deleteChat(user?.conversation_id);">DELETE</span>
+                </div>
+
+                <div class="live-chat__chat-listing-item-body">
+                  <p class="live-chat__chat-listing-item-message" [innerHTML]='newReceivedMsg'>
+                  
+                  </p>
+                  <span class="live-chat__chat-listing-item-time"> {{user?.created | date: 'shortTime'}}</span>
+                </div>
+
+                <!-- <div class="live-chat__chat-listing-item-header">
+                    <span
+                      class="live-chat__chat-listing-item-dot dot--success"
+                    ></span>
+                    <h4 class="live-chat__chat-listing-item-heading">
+                      Vijaya Laxmi Pathowle
+                    </h4>
+                    <span class="app-badge badge--secondary">Bot Name</span>
+                    <span
+                      class="
+                        live-chat__chat-listing-item-count
+                        app-badge
+                        badge--sky
+                      "
+                      >5</span
+                    >
+                  </div>
+  
+                  <div class="live-chat__chat-listing-item-body">
+                    <p class="live-chat__chat-listing-item-message">
+                      Bot: Hi there How may I help you?
+                    </p>
+                    <span class="live-chat__chat-listing-item-time">09:30 AM</span>
+                  </div> -->
+              </div>
+
+              <!-- <div class="live-chat__chat-listing-item">
+                  <div class="live-chat__chat-listing-item-header">
+                    <span
+                      class="live-chat__chat-listing-item-dot dot--secondary"
+                    ></span>
+                    <h4 class="live-chat__chat-listing-item-heading">
+                      Rahul Dilip Sharma
+                    </h4>
+                    <span class="app-badge badge--secondary">Bot Name</span>
+                  </div>
+  
+                  <div class="live-chat__chat-listing-item-body">
+                    <p class="live-chat__chat-listing-item-message">
+                      Bot: Hi there How may I help you?
+                    </p>
+                    <span class="live-chat__chat-listing-item-time">09:30 AM</span>
+                  </div>
+                </div>
+  
+                <div class="live-chat__chat-listing-item">
+                  <div class="live-chat__chat-listing-item-header">
+                    <span class="live-chat__chat-listing-item-dot"></span>
+                    <h4 class="live-chat__chat-listing-item-heading">
+                      Rahul Suhas Chaudhary
+                    </h4>
+                    <span class="app-badge badge--secondary">Bot Name</span>
+                  </div>
+  
+                  <div class="live-chat__chat-listing-item-body">
+                    <p class="live-chat__chat-listing-item-message">
+                      Bot: Hi there How may I help you?
+                    </p>
+                    <span class="live-chat__chat-listing-item-time">09:30 AM</span>
+                  </div>
+                </div> -->
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+
+      <ng-template #waitingWindowtab>
+        <div class="live-chat__sidebar-tabs-content">
+          <div class="live-chat__chat-listing">
+            <div class="live-chat__chat-listing-header">
+              <h5 class="live-chat__chat-listing-heading">Waiting Users</h5>
+              <span class="live-chat__chat-listing-header-filter">
+                <img src="../../../../assets/icons/icon_chat_filter.svg" alt="chat filter icon" />
+              </span>
+            </div>
+
+            <div class="live-chat__chat-listing-list">
+              <div class="live-chat__chat-listing-item" *ngFor="let waiters of waitingUsers.users;">
+                <div class="live-chat__chat-listing-item-header">
+                  <span class="live-chat__chat-listing-item-dot dot--success"></span>
+                  <h4 class="live-chat__chat-listing-item-heading">
+                    {{waiters?.bot_name}}
+                  </h4>
+                  <span class="app-badge badge--secondary">{{waiters?.bot_name}}</span>
+                  <!-- <span
+                          class="
+                            live-chat__chat-listing-item-count
+                            app-badge
+                            badge--sky
+                          "
+                          >5</span -->
+                  <span class="
+                          app-badge
+                          badge--success
+                        " (click)="acceptAgent(waiters?.conversation_id);">ACCEPT</span>
+                </div>
+
+                <div class="live-chat__chat-listing-item-body">
+                  <p class="live-chat__chat-listing-item-message" [innerHTML]='newReceivedMsg'>
+                    
+                  </p>
+                  <span class="live-chat__chat-listing-item-time">
+                    {{waiters?.created | date: 'shortTime'}}
+                  </span>
+                </div>
+
+
+
+
+
+                <!-- <div class="live-chat__chat-listing-item-header">
+                    <span
+                      class="live-chat__chat-listing-item-dot dot--success"
+                    ></span>
+                    <h4 class="live-chat__chat-listing-item-heading">
+                      Vijaya Laxmi Pathowle
+                    </h4>
+                    <span class="app-badge badge--secondary">Bot Name</span>
+                    <span
+                      class="
+                        live-chat__chat-listing-item-count
+                        app-badge
+                        badge--sky
+                      "
+                      >5</span
+                    >
+                  </div>
+  
+                  <div class="live-chat__chat-listing-item-body">
+                    <p class="live-chat__chat-listing-item-message">
+                      Bot: Hi there How may I help you?
+                    </p>
+                    <span class="live-chat__chat-listing-item-time">09:30 AM</span>
+                  </div> -->
+              </div>
+
+              <!-- <div class="live-chat__chat-listing-item">
+                  <div class="live-chat__chat-listing-item-header">
+                    <span
+                      class="live-chat__chat-listing-item-dot dot--secondary"
+                    ></span>
+                    <h4 class="live-chat__chat-listing-item-heading">
+                      Rahul Dilip Sharma
+                    </h4>
+                    <span class="app-badge badge--secondary">Bot Name</span>
+                  </div>
+  
+                  <div class="live-chat__chat-listing-item-body">
+                    <p class="live-chat__chat-listing-item-message">
+                      Bot: Hi there How may I help you?
+                    </p>
+                    <span class="live-chat__chat-listing-item-time">09:30 AM</span>
+                  </div>
+                </div> -->
+
+              <!-- <div class="live-chat__chat-listing-item">
+                  <div class="live-chat__chat-listing-item-header">
+                    <span class="live-chat__chat-listing-item-dot"></span>
+                    <h4 class="live-chat__chat-listing-item-heading">
+                      Rahul Suhas Chaudhary
+                    </h4>
+                    <span class="app-badge badge--secondary">Bot Name</span>
+                  </div>
+  
+                  <div class="live-chat__chat-listing-item-body">
+                    <p class="live-chat__chat-listing-item-message">
+                      Bot: Hi there How may I help you?
+                    </p>
+                    <span class="live-chat__chat-listing-item-time">09:30 AM</span>
+                  </div>
+                </div> -->
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+
+
+    </div>
+  </div>
+
+  <div class="live-chat__chat">
+    <div class="chatbot__bot-body">
+      <div class="chatbot__bot-messages">
+        <div [ngClass]="msg['from'] == 'User' ? 'msg--recieve' : 'msg--send'" class="chatbot__bot-messages-msg"
+          *ngFor="let msg of staleMsgList;">
+          <div class="chatbot__bot-messages-msg-user">
+            <img src="/images/bot_admin_pic.jpg" alt="">
+          </div>
+          <div class="chatbot__bot-messages-msg-content content--text">
+            <p [innerHTML]="msg['msg']"></p>
+            <span class="chatbot__bot-messages-msg-time">{{msg['date'] | date:'dd/MM/YYYY HH:mm a'}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chatbot__bot-footerAdmin">
+      <!-- 'chatbot__bot-footer-input-group' will be hide when 'chatbot__bot-feedback' shown -->
+      <div class="chatbot__bot-footerAdmin-input-group">
+        <input type="text" class="chatbot__bot-footerAdmin-input" placeholder="Type your message here ..."
+          [(ngModel)]="message" />
+
+        <div class="chatbot__bot-footerAdmin-input-append">
+          
+
+          <button class="chatbot__bot-footerAdmin-send" (click)="sendMsg()">
+            <img src="../../../../assets/icons/icon_send_msg.svg" alt="icon send message" />
+
+            <span>Send</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="125.086" viewBox="0 0 180 125.086">
+  <g id="Group_813" data-name="Group 813" transform="translate(-10.001 -26)">
+    <g id="suitcase" transform="translate(59.001 26)">
+      <g id="Group_806" data-name="Group 806" transform="translate(0.092 10.356)">
+        <path id="Path_1384" data-name="Path 1384" d="M74.22,63.686H8.63A8.546,8.546,0,0,1,0,55.056V13.63A8.546,8.546,0,0,1,8.63,5H74.22a8.546,8.546,0,0,1,8.63,8.63V55.056A8.546,8.546,0,0,1,74.22,63.686ZM8.63,8.452A5.309,5.309,0,0,0,3.452,13.63V55.056A5.309,5.309,0,0,0,8.63,60.234H74.22A5.309,5.309,0,0,0,79.4,55.056V13.63A5.309,5.309,0,0,0,74.22,8.452Z" transform="translate(0 -5)" fill="#216efc"/>
+      </g>
+      <g id="Group_807" data-name="Group 807" transform="translate(27.709)">
+        <path id="Path_1385" data-name="Path 1385" d="M33.891,15.808a1.631,1.631,0,0,1-1.726-1.726v-6.9a1.631,1.631,0,0,0-1.726-1.726H13.178a1.631,1.631,0,0,0-1.726,1.726v6.9a1.631,1.631,0,0,1-1.726,1.726A1.631,1.631,0,0,1,8,14.082v-6.9A5.309,5.309,0,0,1,13.178,2H30.439a5.309,5.309,0,0,1,5.178,5.178v6.9A1.631,1.631,0,0,1,33.891,15.808Z" transform="translate(-8 -2)" fill="#216efc"/>
+      </g>
+      <g id="Group_808" data-name="Group 808" transform="translate(0 24.035)">
+        <path id="Path_1386" data-name="Path 1386" d="M41.491,26.353H40.8L1.1,12.544A2.106,2.106,0,0,1,.065,10.128,2.106,2.106,0,0,1,2.482,9.092L41.491,22.9,80.5,9.092a1.447,1.447,0,0,1,2.071,1.036A1.447,1.447,0,0,1,81.535,12.2l-39.7,13.808c0,.345,0,.345-.345.345Z" transform="translate(0.027 -8.962)" fill="#216efc"/>
+      </g>
+    </g>
+    <text id="Job_Guarentee" data-name="Job Guarentee" transform="translate(100.001 143.086)" fill="#216efc" font-size="24" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-89.952" y="0">Job Guarentee</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+.section-boat {
+  display: flex;
+
+  &__listing {
+    padding: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+
+    @media screen and (max-width: 1600px) {
+      padding: 18px;
+    }
+
+    &-add-new,
+    &-item {
+      width: 240px;
+      height: 240px;
+      margin: 12px;
+      border-radius: 5px;
+      padding: 16px;
+
+      @media screen and (max-width: 1600px) {
+        width: 210px;
+        height: 210px;
+      }
+    }
+
+    &-add-new {
+      background-color: $c-secondary;
+      color: $c-white;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+
+      @include flex-center;
+
+      @media screen and (max-width: 1600px) {
+        font-size: 16px;
+      }
+    }
+
+    &-item {
+      background-color: $c-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0 10px rgba($c-black, 0.16);
+      transition: .3s all ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 30px rgba($c-black, 0.16);
+      }
+
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-status {
+        border-radius: 12px;
+        padding: 8px 10px;
+        font-size: 12px;
+        line-height: 1;
+        color: $c-white;
+        padding-left: 24px;
+        position: relative;
+
+        &.status--online {
+          color: $c-success;
+          background-color: rgba($c-success, 0.05);
+        }
+
+        &.status--offline {
+          color: $c-danger;
+          background-color: rgba($c-danger, 0.05);
+        }
+
+        &::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 8px;
+          background-color: currentColor;
+        }
+      }
+
+      &-body {
+        img {
+          max-width: 72px;
+
+          @media screen and (max-width: 1600px) {
+            max-width: 55px;
+          }
+        }
+      }
+
+      &-description {
+        h4 {
+          font-size: 18px;
+          color: $c-dark;
+        }
+        p {
+          font-size: 12px;
+          color: $c-gray;
+        }
+      }
+
+      &-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.bot-plugins {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    max-height: calc(100vh - 210px);
+    overflow: auto;
+    &__item {
+        flex-basis: calc(25% - 30px);
+        padding: 20px;
+        border-radius: 5px;
+        background-color: $c-white;
+        margin: 2px;
+        box-shadow: 0 0 10px rgba($c-black, 0.08);
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+        font-size: 14px;
+        color: $c-gray;
+        &:hover {
+            box-shadow: 0 0 25px rgba($c-black, 0.1);
+        }
+        &-heading {
+            font-size: 16px;
+            margin-bottom: 0.8em;
+        }
+        &-logo {
+            height: 40px;
+            margin-bottom: 20px;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+}
+
+.bot-plugins-details {
+    max-height: calc(100vh - 210px);
+    overflow: auto;
+    padding: 0 15px;
+    .mat-tab-label {
+        font-weight: normal !important;
+        opacity: 1 !important;
+    }
+    .mat-tab-label-active {
+        background-color: rgba($c-secondary, 0.05);
+        border-bottom: 1px solid $c-secondary;
+        color: $c-secondary;
+    }
+    .mat-ink-bar {
+        background-color: $c-secondary !important;
+    }
+    .mat-tab-body-wrapper {
+        margin-top: 20px;
+    }
+    .mat-tab-body-content p {
+        font-size: 14px;
+        margin-bottom: 1em;
+    }
+}
+
+.bot-plugins-overview {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    img {
+        max-height: 40px;
+    }
+    p {
+        margin-left: 25px;
+        color: $c-landing-dark-gray;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    button {
+        margin-left: auto;
+    }
+}
+
+.bot-plugins-carousel {
+    display: block;
+    width: 1000px;
+    // .owl-carousel .owl-stage {
+    //     margin-left: -100px;
+    // }
+}
+
+.plugin-config-popup {
+    &__tagline {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}

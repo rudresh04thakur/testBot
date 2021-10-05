@@ -1,0 +1,19 @@
+<section class="section-boat section--main-scrollable">
+    <!-- <app-bot-sidebar></app-bot-sidebar> -->
+
+    <div class="section-boat__listing">
+
+
+        <div class="section-boat__listing-item" *ngFor="let bot of bots" (click)="trainBot('',bot['bot_name'])">
+            
+            <div class="section-boat__listing-item-body">
+                
+                <div class="section-boat__listing-item-description">
+                    <h4>{{bot.bot_name}}</h4>
+                    
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</section>

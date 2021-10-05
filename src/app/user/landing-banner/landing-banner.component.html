@@ -1,0 +1,26 @@
+<section class="landing-page__banner">
+  <div class="landing-page__banner-inner">
+    <div
+      class="landing-page__banner-text"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-delay="500"
+    >
+      <h2 class="landing-page__banner-heading">
+        {{ heading }}
+      </h2>
+      <p class="landing-page__banner-description">
+        {{ description }}
+      </p>
+      <button class="bttn bttn-secondary">{{ btnLabel }}</button>
+    </div>
+    <div class="landing-page__banner-image">
+      <img
+        [src]="imageURL"
+        alt="laptop"
+      />
+    </div>
+  </div>
+
+  <span class="landing-page__banner-mouse">&nbsp;</span>
+</section>

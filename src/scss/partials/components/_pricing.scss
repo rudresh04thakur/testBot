@@ -1,0 +1,210 @@
+.pricing__banner {
+  margin-top: 82px;
+  padding: 80px 0;
+  text-align: center;
+  background: $c-sky-light;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+    padding: 50px 0;
+  }
+
+  &-heading {
+    color: $c-landing-dark-gray;
+    font-size: 42px;
+    margin-bottom: 0.5em;
+  }
+
+  @media screen and (max-width: 1600px) {
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  &-description {
+    color: $c-landing-dark-gray;
+    font-size: 18px;
+    @media screen and (max-width: 1600px) {
+      font-size: 16px;
+    }
+  }
+
+  
+}
+
+.pricing__packages {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px 20px 0;
+
+  .pricing__package {
+    padding: 30px 50px 100px;
+    text-align: center;
+    background-color: $c-white;
+    color: $c-landing-dark-gray;
+    border: 1px solid rgba($c-gray, 0.2);
+    font-size: 16px;
+    max-width: 300px;
+    margin: auto;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 5px 10px rgba($c-black, 0.16);
+    }
+
+    h5 {
+      font-size: 20px;
+      margin-bottom: 1em;
+    }
+
+    h3 {
+      font-size: 50px;
+      margin: 0.5em 0;
+      
+      @media screen and (max-width: 1600px) {
+        font-size: 42px;
+      }
+    }
+
+    ul {
+      text-align: left;
+      list-style: none;
+
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        &::before {
+          content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4NCiAgPGcgaWQ9Ikdyb3VwXzE5NjYiIGRhdGEtbmFtZT0iR3JvdXAgMTk2NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQzMSAtNTIyKSI+DQogICAgPGNpcmNsZSBpZD0iRWxsaXBzZV8zNzEiIGRhdGEtbmFtZT0iRWxsaXBzZSAzNzEiIGN4PSI5IiBjeT0iOSIgcj0iOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDMxIDUyMikiIGZpbGw9IiMwZjgxYzkiLz4NCiAgICA8cGF0aCBpZD0iU3Ryb2tlXzMiIGRhdGEtbmFtZT0iU3Ryb2tlIDMiIGQ9Ik0wLDIuMzczLDIuMzc0LDQuNzQ2LDcuMTIsMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDM2LjQzOSA1MjguNTMxKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4NCiAgPC9nPg0KPC9zdmc+DQo=);
+          margin-right: 10px;
+          transform: translateY(0.2em);
+        }
+      }
+    }
+
+    .bttn {
+      margin: 30px auto 0;
+
+      svg {
+        width: 14px;
+        margin-left: 10px;
+        transition: 0.3s all ease-in-out;
+      }
+
+      &:hover {
+        svg {
+          transform: translateX(10px);
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      background: $c-ladning-primary;
+      color: $c-white;
+
+      .bttn-outlined-secondary {
+        border: 1px solid $c-white !important;
+        color: $c-white;
+
+        svg {
+          path {
+            stroke: $c-white;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .pricing__package {
+      padding: 22px 30px 50px;
+
+      h3 {
+        font-size: 34px;
+      }
+
+      h5 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.pricing__faq {
+  padding: 80px 15px;
+  background-image: url("../../../assets/images/pricing_faq_shape.png");
+  background-repeat: no-repeat;
+  background-position: 0 80px;
+  background-size: 13%;
+
+  &-heading {
+    color: $c-landing-dark-gray;
+    font-size: 42px;
+    margin-bottom: 0.5em;
+    text-align: center;
+    @media screen and (max-width: 1600px) {
+      font-size: 32px;
+    }
+  }
+
+  &-accordion {
+    max-width: 650px;
+    margin: 0 auto;
+    
+  }
+}
+
+.pricing {
+  .mat-tab-header,
+  .mat-tab-label-container {
+    overflow: visible;
+    border: none;
+  }
+
+  .mat-tab-header {
+    margin-bottom: 50px;
+    margin-top: -60px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+  }
+
+  .mat-tab-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mat-tab-labels {
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba($c-black, 0.16);
+    padding: 5px;
+  }
+
+  .mat-tab-label {
+    height: auto;
+    padding: 15px;
+    min-width: 120px;
+    opacity: 1;
+    background: $c-white;
+    border-radius: 30px;
+    font-size: 16px;
+
+    &.mat-tab-label-active {
+      background-color: $c-secondary;
+      color: $c-white;
+    }
+  }
+
+  .mat-ink-bar {
+    display: none !important;
+  }
+}
